@@ -1,0 +1,28 @@
+# Server-Load-Balancer
+Server Load Balancer- Round Robin Equall Distribution Method
+
+# Server Load Balancer Algorithm Testing #
+# This is Round Robin-Equall Distribution Method #
+#---------------------------------------------------------------------------------------------------------------------#
+
+#server1=(IP Adress, Port)
+#server2=(IP Adress, Port)
+#server3=(IP Adress, Port)
+#server4=(IP Adress, Port)
+#server5=(IP Adress, Port)
+
+# Assume here we have different servers, where their configurations are assigned to variables Server1,Server2 and...so on... 
+
+Servers=['Server1','Server2','Server3','Server4','Server5'] 
+# The Servers list having different Servers.
+# This program is flexible, You can add Server or remove Server from the list, then no changes required in program. 
+
+counter=0
+connection=1
+while counter<connection: # There will be n number of connections with Server load balanacer hence we are using while loop.
+    for server in Servers: # Every time Server load balancer will choose, one different server from the list hence we are using for loop.
+        
+        request=input("Request data to Server:   ") # This input is nothing but actual data request from the client.
+        print("Your data request:'{}' is conncting to {}.".format(request,server))
+        print("Your request is Successfully processed in {}.{}".format(server,'\n')) # Connction is assigning to server of the Servers.
+    
